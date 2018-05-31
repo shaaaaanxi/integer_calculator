@@ -8,7 +8,32 @@ void multi(int i, int max, char*cal, int*num) {
 		num[j + 1] = num[j + 2];
 	}
 }
+void divide(int i, int max, char*cal, int*num) {
+	int result = num[i] / num[i + 1];
+	num[i] = result;
+	for (int j = i; j < max - 1; j++) {
+		cal[j] = cal[j + 1];
+		num[j + 1] = num[j + 2];
+	}
+}
 
+void plus(int i, int max, char*cal, int*num) {
+	int result = num[i] + num[i + 1];
+	num[i] = result;
+	for (int j = i; j < max - 1; j++) {
+		cal[j] = cal[j + 1];
+		num[j + 1] = num[j + 2];
+	}
+}
+
+void minus(int i, int max, char*cal, int*num) {
+	int result = num[i] - num[i + 1];
+	num[i] = result;
+	for (int j = i; j < max - 1; j++) {
+		cal[j] = cal[j + 1];
+		num[j + 1] = num[j + 2];
+	}
+}
 
 int main() {
 
