@@ -37,8 +37,8 @@ void minus(int i, int max, char*cal, int*num) {
 
 int main() {
 
-	char cal[10];
-	int num[10], i;
+	char cal[100];
+	int num[100], i;
 	for (i = 0; cal[i - 1] != '='; i++) {
 		scanf_s("%d %c", &num[i], &cal[i]);
 	}
