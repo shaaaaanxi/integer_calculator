@@ -1,19 +1,12 @@
 #include<stdio.h>
 
-void multi(int *num[100], char *cal[100]) {
-int result;
-int max = strlen(num);
-
-for (int i = 0;i<max; i++) {
-	if (cal[i] == '42') {
-		result = num[i] * num[i + 1];
-		num[i] = result;
-		for (int j = i; j < max-1; j++) {
-			cal[j] = cal[j + 1];
-			num[j + 1] = num[j + 2];
-		}
+void multi(int i, int max, char*cal, int*num) {
+	int result = num[i] * num[i + 1];
+	num[i] = result;
+	for (int j = i; j < max - 1; j++) {
+		cal[j] = cal[j + 1];
+		num[j + 1] = num[j + 2];
 	}
-}
 }
 
 int main() {
